@@ -1,0 +1,34 @@
+{
+	"name"        : "henderjon/base-project",
+	"type"        : "library",
+	"description" : "a typical starting point for a new PHP project via composer",
+	"homepage"    : "http://github.com/henderjon/base-project",
+	"license"     : "BSD-3-Clause",
+	"authors"     : [
+		{
+			"name"     : "Jon Henderson",
+			"role"     : "Developer",
+			"homepage" : "http://github.com/henderjon"
+		}
+	],
+	"support" : {
+		"irc" : "irc://irc.freenode.org/henderjon"
+	},
+	"require": {
+		"php"               : ">=5.4.0",
+		"chevron/chevron"   : "~7.0",
+
+		"henderjon/weights_and_measures": "~3.0",
+		"henderjon/pinger": "~0.4",
+		"corpus/autoloader" : "~1.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit" : "~4.0",
+		"henderjon/drop":"~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"": "src/"
+		}
+	}
+}

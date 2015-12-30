@@ -1,0 +1,13 @@
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+# turn short tags on for 5.3
+	php_flag short_open_tag on
+
+# make sure mod_rewrite is ON
+	RewriteEngine On
+
+# send other requests to the application
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php [QSA,L]
