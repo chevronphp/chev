@@ -68,7 +68,6 @@ define([], function () {
 			}
 		};
 
-		// Adapter pattern
 		return {
 			'get' : function(request) {
 				return core.ajax('GET', url, request);
