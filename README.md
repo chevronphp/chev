@@ -1,6 +1,6 @@
-# base-project
+# chev
 
-This is *typically* how I start a project.
+This is an empty website. Run `composer update` to populate the vendor dir.
 
 
 
