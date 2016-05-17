@@ -4,10 +4,14 @@ use Chevron\DB;
 
 return function($di){
 
-	$di->set("db.mysql.master", function(){
 
-		// you should set this in a config
-		$dbConn = new \PDO("mysql:host=127.0.0.1;port=3306;dbname=localdb;charset=utf8", "root", "");
+	if(file_exists(dirname(DIR_BASE) . "/config.php")){
+		$config = require dirname(DIR_BASE) . "/config.php";
+	}
+
+	$di->set("db.mysql.master", function() use($config){
+
+		$dbConn = new \PDO($config("pdo_conn"), $config("pdo_user"), $config("pdo_pass"));
 		$dbConn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 		$inst = new DB\PDOWrapper;

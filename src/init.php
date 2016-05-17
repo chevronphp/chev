@@ -6,26 +6,26 @@ use Chevron\ErrHandler\ExceptionHandler;
 use Chevron\ObjectLoader\ObjectLoader;
 use Chevron\Containers\Di;
 use Chevron\Kernel\Dispatcher\Dispatcher;
-use Chevron\Kernel\Router\BasicRouter;
+use Chevron\Kernel\Router\WebRouter;
 use Chevron\Kernel\Controllers\FrontController;
 
 define("DIR_BASE", dirname(__FILE__));
 require dirname(DIR_BASE) . "/vendor/autoload.php";
 
-define("DIR_DB", dirname(DIR_BASE) . "/server");
+// define("DIR_DB", dirname(DIR_BASE) . "/server");
 
-spl_autoload_register(new Psr4("Controllers", DIR_BASE . "/app/controllers"));
+spl_autoload_register(new Psr4("", DIR_BASE . "/classes"));
 
 set_error_handler(new ErrorHandler);
 set_exception_handler(new ExceptionHandler(ExceptionHandler::ENV_DEV));
 
-$di         = (new ObjectLoader)->loadObject(new Di, DIR_BASE . "/app/services");
+$di         = (new ObjectLoader)->loadObject(new Di, DIR_BASE . "/services");
 $dispatcher = new Dispatcher($di, "\\Controllers");
-$router     = new BasicRouter;
+$router     = new WebRouter;
 $app        = new FrontController($di, $dispatcher, $router);
 
 $app->setIndexController("\\StaticContent");
-$app->setErrorController("\\ErrorController");
+// $app->setErrorController("\\ErrorController");
 
 $route =  isset($_SERVER["argv"][1]) ? $_SERVER["argv"][1] : $_SERVER["REQUEST_URI"];
 

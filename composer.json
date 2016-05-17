@@ -19,6 +19,7 @@
 		"chevron/chevron"   : "~7.0",
 
 		"henderjon/weights_and_measures": "~3.0",
+		"henderjon/is_cli":"~1.0.1",
 		"henderjon/pinger": "~0.4",
 		"corpus/autoloader" : "~1.0"
 	},
