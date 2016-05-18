@@ -7,10 +7,10 @@ class StaticContent extends Controller {
 	protected $widgets, $layout;
 
 	function init(){
-		$this->widgets = $this->di->get("views.dispatcher");
-		$this->layout  = $this->di->get("layout.main");
+		$this->widgets = $this->getDi()->get("views.dispatcher");
+		$this->layout  = $this->getDi()->get("layout.main");
 
-		if($logger = $this->di->get("log.error.request")){
+		if($logger = $this->getDi()->get("log.error.request")){
 			$this->setLogger($logger);
 		}
 	}
@@ -19,5 +19,6 @@ class StaticContent extends Controller {
 		$this->layout->setView($this->widgets->get("index.php"));
 		return $this->layout;
 	}
-
 }
+
+
