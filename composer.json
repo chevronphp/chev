@@ -18,14 +18,15 @@
 		"php"               : ">=5.5.0",
 		"chevron/chevron"   : "~7.0",
 
-		"henderjon/weights_and_measures": "~3.0",
-		"henderjon/is_cli":"~1.0.1",
-		"henderjon/pinger": "~0.4",
+		"henderjon/drop":"~1.0",
+		"henderjon/redis"  : "~2.0",
+		"henderjon/weights_and_measures" : "~3.0",
+
+		"henderjon/is_cli" :"~1.0.1",
 		"corpus/autoloader" : "~1.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit" : "~4.0",
-		"henderjon/drop":"~1.0"
+		"phpunit/phpunit" : "~4.0"
 	},
 	"autoload": {
 		"psr-4": {

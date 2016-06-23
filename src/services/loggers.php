@@ -2,15 +2,15 @@
 
 return function($di){
 
-	$di->set("log.error.router", function(){
+	$di->set("logErrorRouter", function(){
 		return new \Psr\Log\NullLogger;
 	});
 
-	$di->set("log.error.dispatcher", function(){
+	$di->set("logErrorDispatcher", function(){
 		return new \Psr\Log\NullLogger;
 	});
 
-	$di->set("log.drop", function(){
+	$di->set("logDrop", function(){
 		return new \Chevron\Loggers\UserFuncLogger(function($l, $m, $c){
 			drop($l, $m, $c);
 		});

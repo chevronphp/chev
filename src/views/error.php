@@ -1,4 +1,11 @@
-<h2><?= $this->class ?></h2>
-<h2><?= sprintf("(%d), %s", $this->code, $this->message) ?></h2>
-<h2><?= sprintf("(%d), %s", $this->line, $this->file) ?></h2>
-<pre><?= $this->trace ?></pre>
+
+<p><?= $this->class ?></p>
+
+<p><?= sprintf("%s:%d", $this->file, $this->line) ?></p>
+<fieldset>
+	<legend>backtrace</legend>
+
+	<p><?= $this->message ? sprintf("code: (%d); message: %s", $this->code, $this->message) : "" ?></p>
+	<pre><?= $this->trace ?></pre>
+
+</fieldset>

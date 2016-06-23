@@ -4,12 +4,13 @@ use Chevron\DB;
 
 return function($di){
 
+	$config = [];
 
 	if(file_exists(dirname(DIR_BASE) . "/config.php")){
 		$config = require dirname(DIR_BASE) . "/config.php";
 	}
 
-	$di->set("db.mysql.master", function() use($config){
+	$di->set("dbMaster", function() use($config){
 
 		$dbConn = new \PDO($config("pdo_conn"), $config("pdo_user"), $config("pdo_pass"));
 		$dbConn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -21,6 +22,10 @@ return function($di){
 
 		return $inst;
 
+	});
+
+	$di->set("redis", function() use($config){
+		return (new \Redis\Redis)->connect($config("redis_host"), $config("redis_port"));
 	});
 
 };
