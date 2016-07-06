@@ -2,19 +2,15 @@
 
 namespace Controllers\www;
 
-use Chevron\Kernel\Dispatcher\AbstractDispatchableController;
+use Controller\AbstractDispatchableController;
+use Chevron\Widgets\Dispatcher;
 
 class index extends AbstractDispatchableController {
 
-	protected $widgets, $layout;
-
-	function init(){
-		$this->widgets = $this->getDi()->get("views");
+	public function index(Dispatcher $views){
+		return $views->get("index.php");
 	}
 
-	function index(){
-		return $this->widgets->get("index.php");
-	}
 }
 
 

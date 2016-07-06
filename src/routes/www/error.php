@@ -2,17 +2,18 @@
 
 namespace Controllers\www;
 
-use Chevron\Kernel\Dispatcher\AbstractDispatchableController;
+use Controller\AbstractDispatchableController;
+use Chevron\Kernel\Dispatcher\Interfaces\DispatchableInitializationInterface;
 
-class ErrorController extends AbstractDispatchableController {
+class error extends AbstractDispatchableController implements DispatchableInitializationInterface {
 
-	protected $widgets, $layout;
+	protected $widgets;
 
-	function init(){
+	public function init($action = ""){
 		$this->widgets = $this->getDi()->get("views");
 	}
 
-	function __invoke(){
+	public function __invoke(){
 		$fulfillment = $this->getDi()->get("fulfillment");
 
 		list($code, $e) = func_get_args();

@@ -1,21 +1,20 @@
 <?php
 
 use Corpus\Autoloader\Psr4;
+use Corpus\Autoloader\Psr0;
 use Chevron\ErrHandler\ErrorHandler;
 use Chevron\ErrHandler\ExceptionHandler;
 use Chevron\ObjectLoader\ObjectLoader;
 use Chevron\Containers\Di;
 use Chevron\Kernel\Dispatcher\Dispatcher;
-use Chevron\Kernel\Dispatcher\ControllerNotFoundException;
-use Chevron\Kernel\Dispatcher\ActionNotFoundException;
-use Chevron\Kernel\Router\WebRouter;
+use Chevron\Kernel\Router\BasicRouter;
 use Chevron\Kernel\Router\Route;
-use Chevron\Kernel\Controllers\FrontController;
 
 
 define("DIR_BASE", dirname(__FILE__));
 require dirname(DIR_BASE) . "/vendor/autoload.php";
 
+spl_autoload_register(new Psr0(DIR_BASE . "/classes"));
 spl_autoload_register(new Psr4("Controllers", DIR_BASE . "/routes"));
 
 set_error_handler(new ErrorHandler);
@@ -33,23 +32,14 @@ if(is_cli()){
 	$route      = $_SERVER["REQUEST_URI"];
 }
 
-$route = (new WebRouter)->match($route);
+$route = (new BasicRouter)->match($route);
 
 try{
 	$controller = $dispatcher->dispatch($route);
 	$view       = call_user_func($controller);
-
-}catch(ControllerNotFoundException $e){
-	$controller = $dispatcher->dispatch(new Route(ErrorController::class));
-	$view       = call_user_func($controller, ($action = null), [404, $e]);
-
-}catch(ActionNotFoundException $e){
-	$controller = $dispatcher->dispatch(new Route(ErrorController::class));
-	$view       = call_user_func($controller, ($action = null), [404, $e]);
-
 }catch(\Exception $e){
-	$controller = $dispatcher->dispatch(new Route(ErrorController::class));
-	$view       = call_user_func($controller, ($action = null), [500, $e]);
+	$controller = $dispatcher->dispatch(new Route(error::class));
+	$view       = call_user_func($controller, ($action = null), [$e->getCode(), $e]);
 }
 
 if( is_int($view) ){

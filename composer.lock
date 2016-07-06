@@ -114,16 +114,16 @@
         },
         {
             "name": "chevron/containers",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/containers.git",
-                "reference": "5f906df0b30227f18915598d865cec37281340bd"
+                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/containers/zipball/5f906df0b30227f18915598d865cec37281340bd",
-                "reference": "5f906df0b30227f18915598d865cec37281340bd",
+                "url": "https://api.github.com/repos/chevronphp/containers/zipball/33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
+                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
             ],
             "description": "an implementation of the registry pattern for fun and profit",
             "homepage": "http://github.com/chevronphp/containers",
-            "time": "2016-02-18 14:12:41"
+            "time": "2016-07-06 19:16:05"
         },
         {
             "name": "chevron/db",
@@ -205,16 +205,16 @@
         },
         {
             "name": "chevron/errhandler",
-            "version": "v1.1.3",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/errhandler.git",
-                "reference": "42a5d14fabd802134cc9df6cf6be4200675fe79f"
+                "reference": "536f8c2f95be19183f62e9f9f186fb304c45bf4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/42a5d14fabd802134cc9df6cf6be4200675fe79f",
-                "reference": "42a5d14fabd802134cc9df6cf6be4200675fe79f",
+                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/536f8c2f95be19183f62e9f9f186fb304c45bf4d",
+                "reference": "536f8c2f95be19183f62e9f9f186fb304c45bf4d",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
             ],
             "description": "an exception handler for safety and comfort",
             "homepage": "http://github.com/chevronphp/errhandler",
-            "time": "2014-09-09 02:20:37"
+            "time": "2016-06-23 16:24:21"
         },
         {
             "name": "chevron/hooks",
@@ -291,16 +291,16 @@
         },
         {
             "name": "chevron/kernel",
-            "version": "v0.10.1",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/kernel.git",
-                "reference": "a3765862d26064bff68ed7661057d79d32fd07d9"
+                "reference": "bee5759595ba6bbfd78bec655b391e42a4a40b83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/a3765862d26064bff68ed7661057d79d32fd07d9",
-                "reference": "a3765862d26064bff68ed7661057d79d32fd07d9",
+                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/bee5759595ba6bbfd78bec655b391e42a4a40b83",
+                "reference": "bee5759595ba6bbfd78bec655b391e42a4a40b83",
                 "shasum": ""
             },
             "require": {
@@ -330,7 +330,7 @@
             ],
             "description": "a subset of tools for application development",
             "homepage": "http://github.com/chevronphp/kernel",
-            "time": "2014-12-15 14:33:59"
+            "time": "2016-07-06 16:18:50"
         },
         {
             "name": "chevron/loggers",
@@ -1788,16 +1788,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.1",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623"
+                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5a7e7fc273c758b92b85dcb9c46149ccda89623",
-                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/2884c26ce4c1d61aebf423a8b912950fe7c764de",
+                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1833,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-14 11:18:07"
+            "time": "2016-06-29 05:41:56"
         },
         {
             "name": "webmozart/assert",
