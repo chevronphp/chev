@@ -32,13 +32,14 @@ if(is_cli()){
 	$route      = $_SERVER["REQUEST_URI"];
 }
 
-$route = (new BasicRouter)->match($route);
+$route = $di->get("router")->match($route);
 
 try{
 	$controller = $dispatcher->dispatch($route);
 	$view       = call_user_func($controller);
 }catch(\Exception $e){
 	$controller = $dispatcher->dispatch(new Route(error::class));
+	$code       = $e->getCode() ?: 500;
 	$view       = call_user_func($controller, ($action = null), [$e->getCode(), $e]);
 }
 
