@@ -27,7 +27,7 @@ abstract class AbstractDispatchableController implements DispatchableInterface {
 			return $this->callMethodFromReflectiveDiMethodParams($this->getDi(), $this, $action, func_get_args());
 		}
 
-		throw new \DomainException("Method not found: {$action}; via {$this->getRoute()}", 404);
+		throw new \DomainException("Method not found: {$action}", 404);
 
 	}
 

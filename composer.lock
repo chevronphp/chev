@@ -156,20 +156,20 @@
         },
         {
             "name": "chevron/db",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/db.git",
-                "reference": "12acb58851e9f427659176db7a9c79029537d58f"
+                "reference": "420802cb546a8a2c02bb456906e6af901431bff4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/db/zipball/12acb58851e9f427659176db7a9c79029537d58f",
-                "reference": "12acb58851e9f427659176db7a9c79029537d58f",
+                "url": "https://api.github.com/repos/chevronphp/db/zipball/420802cb546a8a2c02bb456906e6af901431bff4",
+                "reference": "420802cb546a8a2c02bb456906e6af901431bff4",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5",
+                "php": ">=5.5",
                 "psr/log": "~1.0"
             },
             "require-dev": {
@@ -201,20 +201,20 @@
             ],
             "description": "a PDO wrapper for making common DB operations slightly easier",
             "homepage": "http://github.com/chevronphp/db",
-            "time": "2016-04-04 14:40:19"
+            "time": "2016-07-11 16:17:00"
         },
         {
             "name": "chevron/errhandler",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/errhandler.git",
-                "reference": "536f8c2f95be19183f62e9f9f186fb304c45bf4d"
+                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/536f8c2f95be19183f62e9f9f186fb304c45bf4d",
-                "reference": "536f8c2f95be19183f62e9f9f186fb304c45bf4d",
+                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
+                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
             ],
             "description": "an exception handler for safety and comfort",
             "homepage": "http://github.com/chevronphp/errhandler",
-            "time": "2016-06-23 16:24:21"
+            "time": "2016-07-11 16:47:43"
         },
         {
             "name": "chevron/hooks",
@@ -291,20 +291,20 @@
         },
         {
             "name": "chevron/kernel",
-            "version": "v0.11.0",
+            "version": "v0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/kernel.git",
-                "reference": "bee5759595ba6bbfd78bec655b391e42a4a40b83"
+                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/bee5759595ba6bbfd78bec655b391e42a4a40b83",
-                "reference": "bee5759595ba6bbfd78bec655b391e42a4a40b83",
+                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/ffad79e870cb42b19e69de4444f008edd4d0f5ca",
+                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
+                "php": ">=5.5",
                 "psr/log": "~1.0"
             },
             "require-dev": {
@@ -330,7 +330,7 @@
             ],
             "description": "a subset of tools for application development",
             "homepage": "http://github.com/chevronphp/kernel",
-            "time": "2016-07-06 16:18:50"
+            "time": "2016-07-11 16:16:49"
         },
         {
             "name": "chevron/loggers",
@@ -459,16 +459,16 @@
         },
         {
             "name": "chevron/widgets",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/widgets.git",
-                "reference": "b5b91dd3154303cdc9d3febd89423d94d679b5e8"
+                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/b5b91dd3154303cdc9d3febd89423d94d679b5e8",
-                "reference": "b5b91dd3154303cdc9d3febd89423d94d679b5e8",
+                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
+                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,7 @@
             ],
             "description": "a simple view/template system",
             "homepage": "http://github.com/chevronphp/widgets",
-            "time": "2015-04-14 14:33:20"
+            "time": "2016-07-07 19:28:41"
         },
         {
             "name": "corpus/autoloader",
