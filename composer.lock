@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a5f4cc1a1091d9815bcfcce80c5a85a",
-    "content-hash": "9b14b98ddb07a6c341788b3772d59359",
+    "hash": "74491cc3d99f4cef0172da6faf0d8bfb",
+    "content-hash": "5d1fce5baf8555b17d96a7bc5ec664af",
     "packages": [
         {
             "name": "chevron/argv",
@@ -50,16 +50,16 @@
         },
         {
             "name": "chevron/chevron",
-            "version": "v7.0.0",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/chevron.git",
-                "reference": "e914ba40def34826d4c8d9d9ef3f939dda7ebb7a"
+                "reference": "b886a971705ba1f048432c087eeb5ea0d6762e6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/chevron/zipball/e914ba40def34826d4c8d9d9ef3f939dda7ebb7a",
-                "reference": "e914ba40def34826d4c8d9d9ef3f939dda7ebb7a",
+                "url": "https://api.github.com/repos/chevronphp/chevron/zipball/b886a971705ba1f048432c087eeb5ea0d6762e6c",
+                "reference": "b886a971705ba1f048432c087eeb5ea0d6762e6c",
                 "shasum": ""
             },
             "require": {
@@ -67,19 +67,18 @@
                 "chevron/containers": "~5.0",
                 "chevron/db": "~4.0",
                 "chevron/errhandler": "~1.0",
-                "chevron/hooks": "~0.3",
+                "chevron/hash": "~0.0",
+                "chevron/html": "~0.0",
                 "chevron/kernel": "~0.8",
-                "chevron/loggers": "~4.0",
+                "chevron/loggers": "~5.0",
                 "chevron/objectloader": "~1.0",
-                "chevron/password": "~1.0",
                 "chevron/widgets": "~3.0",
+                "henderjon/drop": "~1.0",
+                "henderjon/is_cli": "~1.0",
                 "henderjon/weights_and_measures": "~3.0",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "chevron/example": "~0.1",
-                "henderjon/drop": "~1.0",
-                "henderjon/is_cli": "~1.0",
                 "henderjon/redis": "~1.0",
                 "phpunit/phpunit": "~4.0",
                 "psr/log": "~1.0"
@@ -88,7 +87,6 @@
                 "aws/aws-sdk-php": "~2.5",
                 "corpus/autoloader": "~1.0",
                 "funkatron/funit": "~1.0",
-                "ircmaxell/password-compat": "~1.0",
                 "phpdocumentor/phpdocumentor": "~2.0"
             },
             "type": "library",
@@ -110,20 +108,20 @@
             ],
             "description": "a simple set of useful tools",
             "homepage": "http://github.com/chevronphp/chevron",
-            "time": "2014-11-05 20:26:13"
+            "time": "2016-08-09 16:50:32"
         },
         {
             "name": "chevron/containers",
-            "version": "v5.2.0",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/containers.git",
-                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f"
+                "reference": "9e80bc0b99eec8f3f892d2c578ee424c4dc30e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/containers/zipball/33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
-                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
+                "url": "https://api.github.com/repos/chevronphp/containers/zipball/9e80bc0b99eec8f3f892d2c578ee424c4dc30e53",
+                "reference": "9e80bc0b99eec8f3f892d2c578ee424c4dc30e53",
                 "shasum": ""
             },
             "require": {
@@ -152,20 +150,20 @@
             ],
             "description": "an implementation of the registry pattern for fun and profit",
             "homepage": "http://github.com/chevronphp/containers",
-            "time": "2016-07-06 19:16:05"
+            "time": "2016-08-09 13:33:57"
         },
         {
             "name": "chevron/db",
-            "version": "v4.4.0",
+            "version": "v4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/db.git",
-                "reference": "420802cb546a8a2c02bb456906e6af901431bff4"
+                "reference": "939d351f60131c1772c640def14d2f3cfc5f729e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/db/zipball/420802cb546a8a2c02bb456906e6af901431bff4",
-                "reference": "420802cb546a8a2c02bb456906e6af901431bff4",
+                "url": "https://api.github.com/repos/chevronphp/db/zipball/939d351f60131c1772c640def14d2f3cfc5f729e",
+                "reference": "939d351f60131c1772c640def14d2f3cfc5f729e",
                 "shasum": ""
             },
             "require": {
@@ -201,20 +199,20 @@
             ],
             "description": "a PDO wrapper for making common DB operations slightly easier",
             "homepage": "http://github.com/chevronphp/db",
-            "time": "2016-07-11 16:17:00"
+            "time": "2016-08-09 17:23:02"
         },
         {
             "name": "chevron/errhandler",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/errhandler.git",
-                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a"
+                "reference": "3fc450ae2c29d9043ae056788b7410bad64d422c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
-                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
+                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/3fc450ae2c29d9043ae056788b7410bad64d422c",
+                "reference": "3fc450ae2c29d9043ae056788b7410bad64d422c",
                 "shasum": ""
             },
             "require": {
@@ -243,26 +241,24 @@
             ],
             "description": "an exception handler for safety and comfort",
             "homepage": "http://github.com/chevronphp/errhandler",
-            "time": "2016-07-11 16:47:43"
+            "time": "2016-08-09 13:00:49"
         },
         {
-            "name": "chevron/hooks",
-            "version": "v0.3.2",
+            "name": "chevron/hash",
+            "version": "v0.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/chevronphp/hooks.git",
-                "reference": "23bc6078bd252bc2c7e01b3c6d3c2fe27b2daddb"
+                "url": "https://github.com/chevronphp/hash.git",
+                "reference": "bdbabbe63de41f50a604afe41ad62f4d68eb16c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/hooks/zipball/23bc6078bd252bc2c7e01b3c6d3c2fe27b2daddb",
-                "reference": "23bc6078bd252bc2c7e01b3c6d3c2fe27b2daddb",
+                "url": "https://api.github.com/repos/chevronphp/hash/zipball/bdbabbe63de41f50a604afe41ad62f4d68eb16c8",
+                "reference": "bdbabbe63de41f50a604afe41ad62f4d68eb16c8",
                 "shasum": ""
             },
             "require": {
-                "chevron/objectloader": "~1.0",
-                "php": ">=5.4.0",
-                "psr/log": "~1.0"
+                "php": ">=5.5.0"
             },
             "require-dev": {
                 "henderjon/drop": "~1.0",
@@ -271,7 +267,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Chevron\\Hooks\\": "src/"
+                    "Chevron\\Hash\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -285,22 +281,63 @@
                     "role": "Developer"
                 }
             ],
-            "description": "an event hub and dispatcher",
-            "homepage": "http://github.com/chevronphp/hooks",
-            "time": "2014-09-10 04:03:22"
+            "description": "an OOP way to make hash(es)",
+            "homepage": "http://github.com/chevronphp/hash",
+            "time": "2016-08-01 13:31:47"
         },
         {
-            "name": "chevron/kernel",
-            "version": "v0.12.0",
+            "name": "chevron/html",
+            "version": "v0.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/chevronphp/kernel.git",
-                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca"
+                "url": "https://github.com/chevronphp/html.git",
+                "reference": "878c3bf5a2156425bafb8bdcd96640ba43ee02e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/ffad79e870cb42b19e69de4444f008edd4d0f5ca",
-                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca",
+                "url": "https://api.github.com/repos/chevronphp/html/zipball/878c3bf5a2156425bafb8bdcd96640ba43ee02e4",
+                "reference": "878c3bf5a2156425bafb8bdcd96640ba43ee02e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Chevron\\HTML\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Henderson",
+                    "homepage": "http://github.com/henderjon",
+                    "role": "Developer"
+                }
+            ],
+            "description": "one attempt to make HTML easier/safer",
+            "homepage": "http://github.com/chevronphp/html",
+            "time": "2016-07-25 16:42:23"
+        },
+        {
+            "name": "chevron/kernel",
+            "version": "v0.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chevronphp/kernel.git",
+                "reference": "bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3",
+                "reference": "bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3",
                 "shasum": ""
             },
             "require": {
@@ -330,20 +367,20 @@
             ],
             "description": "a subset of tools for application development",
             "homepage": "http://github.com/chevronphp/kernel",
-            "time": "2016-07-11 16:16:49"
+            "time": "2016-08-09 12:58:54"
         },
         {
             "name": "chevron/loggers",
-            "version": "v4.4.0",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/loggers.git",
-                "reference": "cc5be0bf7b994a82972a92d6bf46376b279db02c"
+                "reference": "f9d9ae57e484fea43252ff380fd208f91f780c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/loggers/zipball/cc5be0bf7b994a82972a92d6bf46376b279db02c",
-                "reference": "cc5be0bf7b994a82972a92d6bf46376b279db02c",
+                "url": "https://api.github.com/repos/chevronphp/loggers/zipball/f9d9ae57e484fea43252ff380fd208f91f780c70",
+                "reference": "f9d9ae57e484fea43252ff380fd208f91f780c70",
                 "shasum": ""
             },
             "require": {
@@ -372,7 +409,7 @@
             ],
             "description": "a blindingly simple logger implementing PSR-3",
             "homepage": "http://github.com/chevronphp/loggers",
-            "time": "2014-10-16 03:04:12"
+            "time": "2016-08-09 14:26:38"
         },
         {
             "name": "chevron/objectloader",
@@ -416,59 +453,17 @@
             "time": "2014-08-31 04:03:27"
         },
         {
-            "name": "chevron/password",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/chevronphp/password.git",
-                "reference": "2c644eda975c68b1d209ac135303bb9d5bf38cda"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/password/zipball/2c644eda975c68b1d209ac135303bb9d5bf38cda",
-                "reference": "2c644eda975c68b1d209ac135303bb9d5bf38cda",
-                "shasum": ""
-            },
-            "require": {
-                "ircmaxell/password-compat": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Chevron\\Password\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jon Henderson",
-                    "homepage": "http://github.com/henderjon",
-                    "role": "Developer"
-                }
-            ],
-            "description": "an injectable wrapper for the password_* functions",
-            "homepage": "http://github.com/henderjon/base-project",
-            "time": "2014-10-24 16:12:22"
-        },
-        {
             "name": "chevron/widgets",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/widgets.git",
-                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a"
+                "reference": "becc518749bd0f94a26d26506fd0495f3debd86e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
-                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
+                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/becc518749bd0f94a26d26506fd0495f3debd86e",
+                "reference": "becc518749bd0f94a26d26506fd0495f3debd86e",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +491,7 @@
             ],
             "description": "a simple view/template system",
             "homepage": "http://github.com/chevronphp/widgets",
-            "time": "2016-07-07 19:28:41"
+            "time": "2016-08-09 12:52:54"
         },
         {
             "name": "corpus/autoloader",
@@ -532,6 +527,177 @@
             ],
             "description": "PSR-0 and PSR-4 Style Autoloaders",
             "time": "2014-04-14 18:30:14"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
+                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.3.1",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2016-07-15 17:22:37"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-05-18 16:56:05"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "PSR-7 message implementation",
+            "keywords": [
+                "http",
+                "message",
+                "stream",
+                "uri"
+            ],
+            "time": "2016-06-24 23:00:38"
         },
         {
             "name": "henderjon/drop",
@@ -700,27 +866,31 @@
             "time": "2014-10-19 03:04:55"
         },
         {
-            "name": "ircmaxell/password-compat",
-            "version": "v1.0.4",
+            "name": "mailjet/mailjet-apiv3-php",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ircmaxell/password_compat.git",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
+                "url": "https://github.com/mailjet/mailjet-apiv3-php.git",
+                "reference": "3e788b2c48bdd2251afe9f7ed10cfe3d5f4bb485"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
+                "url": "https://api.github.com/repos/mailjet/mailjet-apiv3-php/zipball/3e788b2c48bdd2251afe9f7ed10cfe3d5f4bb485",
+                "reference": "3e788b2c48bdd2251afe9f7ed10cfe3d5f4bb485",
                 "shasum": ""
             },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0|5.3",
+                "php": ">=5.4.0"
+            },
             "require-dev": {
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "^4.8"
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "lib/password.php"
-                ]
+                "psr-0": {
+                    "Mailjet": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -728,18 +898,71 @@
             ],
             "authors": [
                 {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
-                    "homepage": "http://blog.ircmaxell.com"
+                    "name": "Mailjet",
+                    "email": "dev@mailjet.com",
+                    "homepage": "https://dev.mailjet.com"
                 }
             ],
-            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
-            "homepage": "https://github.com/ircmaxell/password_compat",
+            "description": "PHP wrapper for the Mailjet API",
+            "homepage": "https://github.com/mailjet/mailjet-apiv3-php/",
             "keywords": [
-                "hashing",
-                "password"
+                "Mailjet",
+                "api",
+                "email",
+                "php",
+                "v3"
             ],
-            "time": "2014-11-20 16:49:30"
+            "time": "2016-06-24 08:36:47"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "psr/log",
@@ -1288,16 +1511,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.26",
+            "version": "4.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74"
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fc1d8cd5b5de11625979125c5639347896ac2c74",
-                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c062dddcb68e44b563f66ee319ddae2b5a322a90",
+                "reference": "c062dddcb68e44b563f66ee319ddae2b5a322a90",
                 "shasum": ""
             },
             "require": {
@@ -1356,7 +1579,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-05-17 03:09:28"
+            "time": "2016-07-21 06:48:14"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1788,16 +2011,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de"
+                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2884c26ce4c1d61aebf423a8b912950fe7c764de",
-                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1819adf2066880c7967df7180f4f662b6f0567ac",
+                "reference": "1819adf2066880c7967df7180f4f662b6f0567ac",
                 "shasum": ""
             },
             "require": {
@@ -1833,32 +2056,33 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-29 05:41:56"
+            "time": "2016-07-17 14:02:08"
         },
         {
             "name": "webmozart/assert",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde"
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3|^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6"
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -1882,7 +2106,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2015-08-24 13:29:44"
+            "time": "2016-08-09 15:02:57"
         }
     ],
     "aliases": [],
