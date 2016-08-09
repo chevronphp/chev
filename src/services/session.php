@@ -29,7 +29,7 @@ return function($di){
 		$arr =& $seg("flash");
 
 		$set = new \Chevron\Containers\Stack($arr);
-		$log = new \Chevron\Loggers\FlashLog($set);
+		$log = new \Chevron\Loggers\StackLog($set);
 
 		return $log;
 	});

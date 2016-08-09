@@ -24,7 +24,6 @@ class LayoutCommander {
 	}
 
 	public function setup($layout, $view){
-		// drop($this->user);
 		$layout->setMany([
 			"flash"  => $this->flashStack(),
 			"logout" => $this->elements->a("logout", ["href" => $this->router->generate(users::class, "logout")]),

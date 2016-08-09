@@ -30,7 +30,7 @@
 		<div class="footerblock">
 			<h2>About the project</h2>
 			<section>
-				<p>Welcome <?= $this->welcome ?>. Would you like to <?= $this->logout ?>? <br><br>  Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
+				<p><?= $this->welcome ? sprintf("Welcome %s. ", $this->welcome): "" ?>Would you like to <?= $this->logout ?>? <br><br>  Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
 				<p>Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
 			</section>
 		</div>
