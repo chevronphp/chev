@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="/img/clear.gif">
 </head>
 <body>
+	<?php call_user_func($this->flash); ?>
 	<?php call_user_func($this->view) ?>
 </body>
 </html>
