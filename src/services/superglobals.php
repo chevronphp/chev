@@ -1,13 +1,20 @@
 <?php
 
+use Chevron\Containers\Registry;
+use Chevron\Containers\Reference;
+
 return function($di){
 
 	$di->set("get", function(){
-		return new \Objects\RequestFilter($_GET);
+		$r = new Registry;
+		$r->setMany($_GET);
+		return $r;
 	});
 
 	$di->set("post", function(){
-		return new \Objects\RequestFilter($_POST);
+		$r = new Registry;
+		$r->setMany($_POST);
+		return $r;
 	});
 
 	/**
@@ -40,12 +47,6 @@ return function($di){
 			}
 		}
 		return $files;
-	});
-
-	$di->set('fulfillment', function () {
-		$fulfillment = new \Chevron\Kernel\Response\Headers;
-		$fulfillment->setHeader('X-Powered-By', 'chevronphp');
-		return $fulfillment;
 	});
 
 };

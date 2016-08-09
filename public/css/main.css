@@ -1,9 +1,244 @@
-/* line 5, ../../src/app/scss/main.scss */
+/* line 23, ../../src/scss/main.scss */
 body {
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-size: 100%;
-  line-height: normal;
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  size: 100%;
+  background-color: #f6f6f6;
+  padding: 0;
+}
+
+/* line 31, ../../src/scss/main.scss */
+header, footer {
+  display: block;
+  clear: both;
+}
+
+/* line 36, ../../src/scss/main.scss */
+p {
+  font-size: .75em;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 42, ../../src/scss/main.scss */
+.page {
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+/* line 48, ../../src/scss/main.scss */
+.title, .project-title, .project-title-subscript, .article .id, .article .title, footer .footerblock h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 53, ../../src/scss/main.scss */
+.project-title {
+  font-size: 2.6em;
+  letter-spacing: .3em;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  line-height: 1.2em;
+  margin: 1.5em 0 .5em 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* line 67, ../../src/scss/main.scss */
+.project-title-subscript {
+  font-size: .2em;
+  letter-spacing: .5em;
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+/* line 75, ../../src/scss/main.scss */
+.collection-title {
+  font-size: .3em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* line 81, ../../src/scss/main.scss */
+.link, .searchbar a, .searchbar span, .source_link p a {
+  text-decoration: none;
+  display: block;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .7em;
+}
+
+/* line 91, ../../src/scss/main.scss */
+.searchbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  list-style-type: none;
+}
+/* line 99, ../../src/scss/main.scss */
+.searchbar a, .searchbar span {
+  padding: 1em;
+}
+
+/* line 105, ../../src/scss/main.scss */
+.scaled-img {
+  max-width: 100%;
+  margin: .8em 0 0 0;
+}
+
+/* line 110, ../../src/scss/main.scss */
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* line 115, ../../src/scss/main.scss */
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 24.99999999999%;
+}
+
+/* line 121, ../../src/scss/main.scss */
+.article {
+  box-shadow: .05em .05em .3em #e0e0e0;
+  background-color: #fff;
+  margin: .3em .3em;
+  padding: 0 .9em;
+}
+/* line 126, ../../src/scss/main.scss */
+.article .id, .article .project-title, .article .project-title-subscript, .article .id, .article .title, .article footer .footerblock h2, footer .footerblock .article h2 {
+  font-size: .7em;
+}
+
+/* line 138, ../../src/scss/main.scss */
+.red {
+  padding-bottom: 1.5em;
+  margin-bottom: .2em;
+  color: #e71d36;
+  border-bottom: solid 0.1em #e71d36;
+}
+
+/* line 145, ../../src/scss/main.scss */
+.teal {
+  padding-bottom: 1.5em;
+  margin-bottom: .2em;
+  color: #2ec4b6;
+  border-bottom: solid 0.1em #2ec4b6;
+}
+
+/* line 152, ../../src/scss/main.scss */
+.mustard {
+  padding-bottom: 1.5em;
+  margin-bottom: .2em;
+  color: #ff9f1c;
+  border-bottom: solid 0.1em #ff9f1c;
+}
+
+/* line 159, ../../src/scss/main.scss */
+footer {
+  margin-top: 2em;
+  background-color: #000;
+  padding: 2em;
+  color: #f6f6f6;
+}
+/* line 164, ../../src/scss/main.scss */
+footer .footerblock {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 167, ../../src/scss/main.scss */
+footer .footerblock h2 {
+  font-size: .7em;
+}
+/* line 171, ../../src/scss/main.scss */
+footer .footerblock section {
+  display: flex;
+  flex-flow: row nowrap;
+}
+/* line 174, ../../src/scss/main.scss */
+footer .footerblock section p {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 183, ../../src/scss/main.scss */
+  .column {
+    max-width: 49.99999999999%;
+  }
+
+  /* line 186, ../../src/scss/main.scss */
+  .page {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 575px) {
+  /* line 192, ../../src/scss/main.scss */
+  .column {
+    max-width: 100%;
+  }
+
+  /* line 195, ../../src/scss/main.scss */
+  .page {
+    width: 95%;
+  }
+}
+/* line 201, ../../src/scss/main.scss */
+.upload_content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/* line 206, ../../src/scss/main.scss */
+.upload_content .input, .upload_content p {
+  max-width: 50%;
+  width: 50%;
+}
+/* line 210, ../../src/scss/main.scss */
+.upload_content .input {
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: right;
+}
+/* line 217, ../../src/scss/main.scss */
+.upload_content .input label {
+  width: 25%;
+  text-align: right;
+  padding-right: 6px;
+}
+/* line 218, ../../src/scss/main.scss */
+.upload_content .input input, .upload_content .input textarea {
+  width: 70%;
+  max-width: 70%;
+}
+
+/* line 222, ../../src/scss/main.scss */
+#flash_stack {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #DEAF64;
+  -webkit-transition: opacity 2s ease-in 2s;
+  transition: opacity 2s ease-in 2s;
+}
+
+/* line 241, ../../src/scss/main.scss */
+#flash_stack.hidden {
+  opacity: 0.0;
 }
