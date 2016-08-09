@@ -22,8 +22,9 @@ class users extends AbstractDispatchableController {
 			}
 
 			$link = sprintf("http://local.equalvalues.com%s", $router->generate(users::class, "login", "html", ["c" => $user->getToken()]));
-			// $this->send($post->get("username"), $link);
-			// return $this->redirect($this->router->generate(users::class));
+			$this->send($post->get("username"), $link);
+			$flash->notice("check your email");
+			return $this->redirect($router->generate(users::class));
 		}
 
 		return $views->get("user.php", [
@@ -34,15 +35,17 @@ class users extends AbstractDispatchableController {
 		]);
 	}
 
-	protected function login($userMapper, $get, $currentUser, $router){
+	protected function login($userMapper, $get, $currentUser, $router, $flash){
 		$user = $userMapper->getFromToken($get->get("c"));
 
 		if(!($user instanceof User)){
+			$flash->notice("please log in");
 			return $this->redirect($router->generate(users::class));
 		}
 
 		$userMapper->regenHash($user);
-		$currentUser->set("user_id", __LINE__);
+		$currentUser->set("user_id", $user->getId());
+		$flash->notice("logged in");
 		return $this->redirect($router->generate(index::class));
 	}
 

@@ -21,19 +21,24 @@ p {
 }
 
 /* line 42, ../../src/scss/main.scss */
+a:visited {
+  color: #aaa;
+}
+
+/* line 46, ../../src/scss/main.scss */
 .page {
   width: 80%;
   min-width: 400px;
   margin: 0 auto;
 }
 
-/* line 48, ../../src/scss/main.scss */
+/* line 52, ../../src/scss/main.scss */
 .title, .project-title, .project-title-subscript, .article .id, .article .title, footer .footerblock h2 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
-/* line 53, ../../src/scss/main.scss */
+/* line 57, ../../src/scss/main.scss */
 .project-title {
   font-size: 2.6em;
   letter-spacing: .3em;
@@ -47,7 +52,7 @@ p {
   text-align: center;
 }
 
-/* line 67, ../../src/scss/main.scss */
+/* line 71, ../../src/scss/main.scss */
 .project-title-subscript {
   font-size: .2em;
   letter-spacing: .5em;
@@ -55,14 +60,14 @@ p {
   text-align: center;
 }
 
-/* line 75, ../../src/scss/main.scss */
+/* line 79, ../../src/scss/main.scss */
 .collection-title {
   font-size: .3em;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
 
-/* line 81, ../../src/scss/main.scss */
+/* line 85, ../../src/scss/main.scss */
 .link, .searchbar a, .searchbar span, .source_link p a {
   text-decoration: none;
   display: block;
@@ -73,7 +78,7 @@ p {
   font-size: .7em;
 }
 
-/* line 91, ../../src/scss/main.scss */
+/* line 95, ../../src/scss/main.scss */
 .searchbar {
   display: flex;
   flex-flow: row wrap;
@@ -83,43 +88,43 @@ p {
   margin-top: 2em;
   list-style-type: none;
 }
-/* line 99, ../../src/scss/main.scss */
+/* line 103, ../../src/scss/main.scss */
 .searchbar a, .searchbar span {
   padding: 1em;
 }
 
-/* line 105, ../../src/scss/main.scss */
+/* line 109, ../../src/scss/main.scss */
 .scaled-img {
   max-width: 100%;
   margin: .8em 0 0 0;
 }
 
-/* line 110, ../../src/scss/main.scss */
+/* line 114, ../../src/scss/main.scss */
 .columns {
   display: flex;
   flex-flow: row wrap;
 }
 
-/* line 115, ../../src/scss/main.scss */
+/* line 119, ../../src/scss/main.scss */
 .column {
   display: flex;
   flex-flow: column nowrap;
   max-width: 24.99999999999%;
 }
 
-/* line 121, ../../src/scss/main.scss */
+/* line 125, ../../src/scss/main.scss */
 .article {
   box-shadow: .05em .05em .3em #e0e0e0;
   background-color: #fff;
   margin: .3em .3em;
   padding: 0 .9em;
 }
-/* line 126, ../../src/scss/main.scss */
+/* line 130, ../../src/scss/main.scss */
 .article .id, .article .project-title, .article .project-title-subscript, .article .id, .article .title, .article footer .footerblock h2, footer .footerblock .article h2 {
   font-size: .7em;
 }
 
-/* line 138, ../../src/scss/main.scss */
+/* line 142, ../../src/scss/main.scss */
 .red {
   padding-bottom: 1.5em;
   margin-bottom: .2em;
@@ -127,7 +132,7 @@ p {
   border-bottom: solid 0.1em #e71d36;
 }
 
-/* line 145, ../../src/scss/main.scss */
+/* line 149, ../../src/scss/main.scss */
 .teal {
   padding-bottom: 1.5em;
   margin-bottom: .2em;
@@ -135,7 +140,7 @@ p {
   border-bottom: solid 0.1em #2ec4b6;
 }
 
-/* line 152, ../../src/scss/main.scss */
+/* line 156, ../../src/scss/main.scss */
 .mustard {
   padding-bottom: 1.5em;
   margin-bottom: .2em;
@@ -143,68 +148,68 @@ p {
   border-bottom: solid 0.1em #ff9f1c;
 }
 
-/* line 159, ../../src/scss/main.scss */
+/* line 163, ../../src/scss/main.scss */
 footer {
   margin-top: 2em;
   background-color: #000;
   padding: 2em;
   color: #f6f6f6;
 }
-/* line 164, ../../src/scss/main.scss */
+/* line 168, ../../src/scss/main.scss */
 footer .footerblock {
   width: 80%;
   margin: 0 auto;
 }
-/* line 167, ../../src/scss/main.scss */
+/* line 171, ../../src/scss/main.scss */
 footer .footerblock h2 {
   font-size: .7em;
 }
-/* line 171, ../../src/scss/main.scss */
+/* line 175, ../../src/scss/main.scss */
 footer .footerblock section {
   display: flex;
   flex-flow: row nowrap;
 }
-/* line 174, ../../src/scss/main.scss */
+/* line 178, ../../src/scss/main.scss */
 footer .footerblock section p {
   margin-left: 8px;
   margin-right: 8px;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 183, ../../src/scss/main.scss */
+  /* line 187, ../../src/scss/main.scss */
   .column {
     max-width: 49.99999999999%;
   }
 
-  /* line 186, ../../src/scss/main.scss */
+  /* line 190, ../../src/scss/main.scss */
   .page {
     width: 90%;
   }
 }
 @media screen and (max-width: 575px) {
-  /* line 192, ../../src/scss/main.scss */
+  /* line 196, ../../src/scss/main.scss */
   .column {
     max-width: 100%;
   }
 
-  /* line 195, ../../src/scss/main.scss */
+  /* line 199, ../../src/scss/main.scss */
   .page {
     width: 95%;
   }
 }
-/* line 201, ../../src/scss/main.scss */
+/* line 205, ../../src/scss/main.scss */
 .upload_content {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-/* line 206, ../../src/scss/main.scss */
+/* line 210, ../../src/scss/main.scss */
 .upload_content .input, .upload_content p {
   max-width: 50%;
   width: 50%;
 }
-/* line 210, ../../src/scss/main.scss */
+/* line 214, ../../src/scss/main.scss */
 .upload_content .input {
   margin: 12px 0 0 0;
   display: flex;
@@ -213,19 +218,19 @@ footer .footerblock section p {
   align-items: flex-start;
   text-align: right;
 }
-/* line 217, ../../src/scss/main.scss */
+/* line 221, ../../src/scss/main.scss */
 .upload_content .input label {
   width: 25%;
   text-align: right;
   padding-right: 6px;
 }
-/* line 218, ../../src/scss/main.scss */
+/* line 222, ../../src/scss/main.scss */
 .upload_content .input input, .upload_content .input textarea {
   width: 70%;
   max-width: 70%;
 }
 
-/* line 222, ../../src/scss/main.scss */
+/* line 226, ../../src/scss/main.scss */
 #flash_stack {
   position: fixed;
   top: 0px;
@@ -238,7 +243,7 @@ footer .footerblock section p {
   transition: opacity 2s ease-in 2s;
 }
 
-/* line 241, ../../src/scss/main.scss */
+/* line 245, ../../src/scss/main.scss */
 #flash_stack.hidden {
   opacity: 0.0;
 }

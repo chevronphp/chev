@@ -114,16 +114,16 @@
         },
         {
             "name": "chevron/containers",
-            "version": "v5.2.0",
+            "version": "v5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/containers.git",
-                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f"
+                "reference": "9e80bc0b99eec8f3f892d2c578ee424c4dc30e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/containers/zipball/33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
-                "reference": "33d612cd18b7f59a872282fb8b048c3bc9b73f8f",
+                "url": "https://api.github.com/repos/chevronphp/containers/zipball/9e80bc0b99eec8f3f892d2c578ee424c4dc30e53",
+                "reference": "9e80bc0b99eec8f3f892d2c578ee424c4dc30e53",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
             ],
             "description": "an implementation of the registry pattern for fun and profit",
             "homepage": "http://github.com/chevronphp/containers",
-            "time": "2016-07-06 19:16:05"
+            "time": "2016-08-09 13:33:57"
         },
         {
             "name": "chevron/db",
@@ -205,16 +205,16 @@
         },
         {
             "name": "chevron/errhandler",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/errhandler.git",
-                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a"
+                "reference": "3fc450ae2c29d9043ae056788b7410bad64d422c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
-                "reference": "a5e72dea191bcb3a2f4f760e94e7a570a59b898a",
+                "url": "https://api.github.com/repos/chevronphp/errhandler/zipball/3fc450ae2c29d9043ae056788b7410bad64d422c",
+                "reference": "3fc450ae2c29d9043ae056788b7410bad64d422c",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
             ],
             "description": "an exception handler for safety and comfort",
             "homepage": "http://github.com/chevronphp/errhandler",
-            "time": "2016-07-11 16:47:43"
+            "time": "2016-08-09 13:00:49"
         },
         {
             "name": "chevron/hooks",
@@ -332,16 +332,16 @@
         },
         {
             "name": "chevron/kernel",
-            "version": "v0.12.0",
+            "version": "v0.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/kernel.git",
-                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca"
+                "reference": "bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/ffad79e870cb42b19e69de4444f008edd4d0f5ca",
-                "reference": "ffad79e870cb42b19e69de4444f008edd4d0f5ca",
+                "url": "https://api.github.com/repos/chevronphp/kernel/zipball/bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3",
+                "reference": "bc7b6688cd0c16bf9bfbc4c75b26aa24b6a79dc3",
                 "shasum": ""
             },
             "require": {
@@ -371,7 +371,7 @@
             ],
             "description": "a subset of tools for application development",
             "homepage": "http://github.com/chevronphp/kernel",
-            "time": "2016-07-11 16:16:49"
+            "time": "2016-08-09 12:58:54"
         },
         {
             "name": "chevron/loggers",
@@ -500,16 +500,16 @@
         },
         {
             "name": "chevron/widgets",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chevronphp/widgets.git",
-                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a"
+                "reference": "becc518749bd0f94a26d26506fd0495f3debd86e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
-                "reference": "fc4f64b2817d2256d324c2b4e0d3c49fd8e6312a",
+                "url": "https://api.github.com/repos/chevronphp/widgets/zipball/becc518749bd0f94a26d26506fd0495f3debd86e",
+                "reference": "becc518749bd0f94a26d26506fd0495f3debd86e",
                 "shasum": ""
             },
             "require": {
@@ -537,7 +537,7 @@
             ],
             "description": "a simple view/template system",
             "homepage": "http://github.com/chevronphp/widgets",
-            "time": "2016-07-07 19:28:41"
+            "time": "2016-08-09 12:52:54"
         },
         {
             "name": "corpus/autoloader",
@@ -2148,28 +2148,29 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde"
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
-                "reference": "30eed06dd6bc88410a4ff7f77b6d22f3ce13dbde",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3|^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6"
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -2193,7 +2194,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2015-08-24 13:29:44"
+            "time": "2016-08-09 15:02:57"
         }
     ],
     "aliases": [],

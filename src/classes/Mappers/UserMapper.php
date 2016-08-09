@@ -32,12 +32,12 @@ class UserMapper {
 		$sql = "select user_id, username, name_given, name_family, token, token_expired from users where user_id = %s";
 
 		$ids = array_map("intval", $ids);
-		$rows = $this->dbWrite->keyrow($sql, [$ids], true);
+		$rows = $this->dbWrite->rows($sql, [$ids], true);
 
 		$return = [];
 		if($rows){
-			foreach($rows as $id => $row){
-				$return[$id] = call_user_func_array([$this->userFactory, UserFactory::MAKE], $row);
+			foreach($rows as $row){
+				$return[$row["user_id"]] = call_user_func_array([$this->userFactory, UserFactory::MAKE], $row);
 			}
 		}
 		return $return;
