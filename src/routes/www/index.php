@@ -10,15 +10,17 @@ use Objects\User;
 
 class index extends AbstractDispatchableController {
 
-	public function index(Dispatcher $views, $currentUser, $userMapper, $elements){
-		if($userId = $currentUser->get("user_id")){
-			$user = $userMapper->getFromId($userId);
-			if($user instanceof User){
-
-			}
+	public function index(Dispatcher $views, $assetMapper){
+		$columns = [];
+		$nCol = 0;
+		foreach($assetMapper->getAll() as $asset){
+			$columns[$nCol][] = $asset;
+			$nCol = $nCol >=3 ? 0 : $nCol += 1;
 		}
 
-		return $views->get("index.php");
+		return $views->get("index.php", [
+			"columns" => $columns,
+		]);
 	}
 
 	public function add(Dispatcher $views, array $files, $router){

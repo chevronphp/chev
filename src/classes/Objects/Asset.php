@@ -10,15 +10,15 @@ class Asset {
 	protected $objectNumber;
 	protected $title;
 	protected $description;
-	protected $owner;
+	protected $userId;
 
-	public function __construct($assetId, $objectNumber, $fname, $title, $description, $owner, $collection){
+	public function __construct($assetId, $objectNumber, $fname, $title, $description, $userId, $collection){
 		$this->setId($assetId);
 		$this->setCollection($collection);
 		$this->setObjectNumber($objectNumber);
 		$this->setTitle($title);
 		$this->setDescription($description);
-		$this->setOwner($owner);
+		$this->setUserId($userId);
 		$this->setFname($fname);
 	}
 
@@ -105,15 +105,15 @@ class Asset {
 	/**
 	 *
 	 */
-	public function getOwner(){
-		return $this->owner;
+	public function getUserId(){
+		return $this->userId;
 	}
 
 	/**
 	 *
 	 */
-	public function setOwner($owner){
-		$this->owner = $owner;
+	public function setUserId($userId){
+		$this->userId = $userId;
 	}
 
 }

@@ -25,15 +25,30 @@ class AssetMapper {
 	}
 
 	public function getFromIds(array $ids){
-		$sql = "select asset_id, object_number, fname, title, description, owner, collection from assets where asset_id = %s";
+		$sql = "select asset_id, object_number, fname, title, description, user_id, collection from assets where asset_id = %s";
 
 		$ids = array_map("intval", $ids);
-		$rows = $this->dbWrite->keyrow($sql, [$ids], true);
+		$rows = $this->dbWrite->rows($sql, [$ids], true);
 
 		$return = [];
 		if($rows){
-			foreach($rows as $id => $row){
-				$return[$id] = call_user_func_array([$this->assetFactory, AssetFactory::MAKE], $row);
+			foreach($rows as $row){
+				$return[$row["asset_id"]] = call_user_func_array([$this->assetFactory, AssetFactory::MAKE], $row);
+			}
+		}
+		return $return;
+	}
+
+	public function getAll($limit = null){
+		$limit = (int)$limit;
+		$sql = "select asset_id, object_number, fname, title, description, user_id, collection from assets order by asset_id asc" . ($limit ? " limit {$limit}" : "");
+
+		$rows = $this->dbWrite->rows($sql);
+
+		$return = [];
+		if($rows){
+			foreach($rows as $row){
+				$return[$row["asset_id"]] = call_user_func_array([$this->assetFactory, AssetFactory::MAKE], $row);
 			}
 		}
 		return $return;
@@ -51,7 +66,7 @@ class AssetMapper {
 			"object_number" => $asset->getObjectNumber(),
 			"title"         => $asset->getTitle(),
 			"description"   => $asset->getDescription(),
-			"owner"         => $asset->getOwner(),
+			"user_id"       => $asset->getUserId(),
 			"collection"    => $asset->getCollection(),
 		];
 
@@ -66,8 +81,8 @@ class AssetMapper {
 		}
 	}
 
-	public function make($objectNumber, $fname, $title, $description, $owner, $collection = null){
-		$asset = $this->assetFactory->make(null, $objectNumber, $fname, $title, $description, $owner, $collection);
+	public function make($objectNumber, $fname, $title, $description, $userId, $collection = null){
+		$asset = $this->assetFactory->make(null, $objectNumber, $fname, $title, $description, $userId, $collection);
 		$this->save($asset);
 		return $asset;
 	}
