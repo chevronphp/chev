@@ -80,6 +80,11 @@ a:visited{
 	font-size: .3em;
 	letter-spacing: .1em;
 	text-transform: uppercase;
+
+	padding-bottom: 1.5em;
+	margin-bottom: .2em;
+	border-bottom-style: solid;
+	border-bottom-width: .1em;
 }
 
 .link {
@@ -140,24 +145,18 @@ a:visited{
 }
 
 .red {
-	padding-bottom: 1.5em;
-	margin-bottom: .2em;
 	color: $colorRed;
-	border-bottom: solid .1em $colorRed;
+	border-bottom-color: $colorRed;
 }
 
 .teal {
-	padding-bottom: 1.5em;
-	margin-bottom: .2em;
 	color: $colorTeal;
-	border-bottom: solid .1em $colorTeal;
+	border-bottom-color: $colorTeal;
 }
 
 .mustard {
-	padding-bottom: 1.5em;
-	margin-bottom: .2em;
 	color: $colorMustard;
-	border-bottom: solid .1em $colorMustard;
+	border-bottom-color: $colorMustard;
 }
 
 footer {
@@ -207,7 +206,7 @@ footer {
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	.input, p{
+	.input, p, div{
 		max-width: 50%;
 		width: 50%;
 	}
@@ -220,6 +219,11 @@ footer {
 		text-align: right;
 		label { width: 25%; text-align: right; padding-right: 6px; }
 		input, textarea { width: 70%; max-width: 70%; }
+	}
+	.color_picker {
+		text-align: left;
+		input, textarea { width: 8%; max-width: 10%; }
+		span { border-bottom-width: 0px; }
 	}
 }
 

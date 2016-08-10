@@ -29,7 +29,7 @@ class UserMapper {
 	}
 
 	public function getFromIds(array $ids){
-		$sql = "select user_id, username, name_given, name_family, token, token_expired from users where user_id = %s";
+		$sql = "select user_id, username, name_given, name_family, color, token, token_expired from users where user_id = %s";
 
 		$ids = array_map("intval", $ids);
 		$rows = $this->dbWrite->rows($sql, [$ids], true);
@@ -44,7 +44,7 @@ class UserMapper {
 	}
 
 	public function getFromUsername($username){
-		$sql = "select user_id, username, name_given, name_family, token, token_expired from users where username = ?";
+		$sql = "select user_id, username, name_given, name_family, color, token, token_expired from users where username = ?";
 		$row = $this->dbWrite->row($sql, [$username]);
 		if($row){
 			return call_user_func_array([$this->userFactory, UserFactory::MAKE], $row);
@@ -53,7 +53,7 @@ class UserMapper {
 	}
 
 	public function getFromToken($token){
-		$sql = "select user_id, username, name_given, name_family, token, token_expired from users where token = ?";
+		$sql = "select user_id, username, name_given, name_family, color, token, token_expired from users where token = ?";
 		$row = $this->dbWrite->row($sql, [$token]);
 		if($row){
 			return call_user_func_array([$this->userFactory, UserFactory::MAKE], $row);
@@ -69,6 +69,7 @@ class UserMapper {
 			"name_family"   => $user->getNameFamily(),
 			"token"         => $this->hash->quick(json_encode($user) . microtime()),
 			"token_expired" => 0,
+			"color"         => $user->getColor(),
 		];
 
 		if($user->getId()){
@@ -95,7 +96,7 @@ class UserMapper {
 		}
 	}
 
-	public function make($user_id, $username, $name_given, $name_family, $token, $token_expired){
+	public function make($user_id, $username, $name_given, $name_family, $color, $token, $token_expired){
 		$user = $this->userFactory->make($user_id, $username, $name_given, $name_family, $token, $token_expired);
 		$this->save($user);
 		return $user;

@@ -14,14 +14,20 @@
 		</div>
 
 		<div class="input">
-			<label for="name_given">Given Name</label>
+			<label for="name_given">given name</label>
 			<?= $this->nameGiven ?>
 
 		</div>
 
 		<div class="input">
-			<label for="name_family">Family Name</label>
+			<label for="name_family">family name</label>
 			<?= $this->nameFamily ?>
+
+		</div>
+
+		<div class="input">
+			<label for="color">color</label>
+			<?= $this->colors ?>
 
 		</div>
 

@@ -3,7 +3,7 @@
 			<div class="column">
 				<?php foreach($assets as $asset){ ?>
 				<article class="article">
-					<h4 class="collection-title red"><?= $asset->getCollection() ?></h4>
+					<h4 class="collection-title <?= $asset->getColor() ?>"><?= $asset->getCollection() ?>'s Collection</h4>
 					<section>
 						<div class="thumb">
 							<img class="scaled-img" src="/images/<?= $asset->getFname() ?>"/>

@@ -25,7 +25,20 @@ class AssetMapper {
 	}
 
 	public function getFromIds(array $ids){
-		$sql = "select asset_id, object_number, fname, title, description, user_id, collection from assets where asset_id = %s";
+		$sql = "
+			select
+			  a.asset_id,
+			  a.object_number,
+			  a.fname,
+			  a.title,
+			  a.description,
+			  a.user_id,
+			  u.color color,
+			  u.name_family collection
+			from assets a
+			inner join users u on u.user_id = a.user_id
+			where asset_id = %s
+		";
 
 		$ids = array_map("intval", $ids);
 		$rows = $this->dbWrite->rows($sql, [$ids], true);
@@ -41,7 +54,20 @@ class AssetMapper {
 
 	public function getAll($limit = null){
 		$limit = (int)$limit;
-		$sql = "select asset_id, object_number, fname, title, description, user_id, collection from assets order by asset_id asc" . ($limit ? " limit {$limit}" : "");
+		$sql = "
+			select
+			  a.asset_id,
+			  a.object_number,
+			  a.fname,
+			  a.title,
+			  a.description,
+			  a.user_id,
+			  u.color color,
+			  u.name_family collection
+			from assets a
+			inner join users u on u.user_id = a.user_id
+			order by asset_id asc
+		" . ($limit ? " limit {$limit}" : "");
 
 		$rows = $this->dbWrite->rows($sql);
 
@@ -81,8 +107,8 @@ class AssetMapper {
 		}
 	}
 
-	public function make($objectNumber, $fname, $title, $description, $userId, $collection = null){
-		$asset = $this->assetFactory->make(null, $objectNumber, $fname, $title, $description, $userId, $collection);
+	public function make($objectNumber, $fname, $title, $description, $userId, $color, $collection = null){
+		$asset = $this->assetFactory->make(null, $objectNumber, $fname, $title, $description, $userId, $color, $collection);
 		$this->save($asset);
 		return $asset;
 	}

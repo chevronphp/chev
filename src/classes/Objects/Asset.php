@@ -6,14 +6,16 @@ class Asset {
 
 	protected $id;
 	protected $fname;
+	protected $color;
 	protected $collection;
 	protected $objectNumber;
 	protected $title;
 	protected $description;
 	protected $userId;
 
-	public function __construct($assetId, $objectNumber, $fname, $title, $description, $userId, $collection){
+	public function __construct($assetId, $objectNumber, $fname, $title, $description, $userId, $color, $collection){
 		$this->setId($assetId);
+		$this->setColor($color);
 		$this->setCollection($collection);
 		$this->setObjectNumber($objectNumber);
 		$this->setTitle($title);
@@ -86,6 +88,20 @@ class Asset {
 	 */
 	public function setTitle($title){
 		$this->title = $title;
+	}
+
+	/**
+	 *
+	 */
+	public function getColor(){
+		return $this->color;
+	}
+
+	/**
+	 *
+	 */
+	public function setColor($color){
+		$this->color = $color;
 	}
 
 	/**

@@ -21,7 +21,7 @@ class index extends AbstractDispatchableController {
 						"object_number" => 12,
 						"title"         => "Grandma Kvamme's doughnuts",
 						"description"   => $descr,
-						"user_id"       => 1,
+						"user_id"       => 2,
 					]);
 					break;
 				case $n % 2:
@@ -39,7 +39,7 @@ class index extends AbstractDispatchableController {
 						"object_number" => 12,
 						"title"         => "Grandma Kvamme's doughnuts",
 						"description"   => "{$descr}\n\n{$descr}\n\n{$descr}",
-						"user_id"       => 1,
+						"user_id"       => 3,
 					]);
 					break;
 			}

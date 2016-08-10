@@ -8,14 +8,16 @@ class User {
 	protected $username;
 	protected $nameGiven;
 	protected $nameFamily;
+	protected $color;
 	protected $token;
 	protected $tokenExpired;
 
-	public function __construct($userId, $username, $nameGiven, $nameFamily, $token, $tokenExpired){
+	public function __construct($userId, $username, $nameGiven, $nameFamily, $color, $token, $tokenExpired){
 		$this->setId($userId);
 		$this->setUsername($username);
 		$this->setNameGiven($nameGiven);
 		$this->setNameFamily($nameFamily);
+		$this->setColor($color);
 		$this->setToken($token);
 		$this->setTokenExpired($tokenExpired);
 	}
@@ -52,6 +54,14 @@ class User {
 
 	public function setNameFamily($nameFamily){
 		$this->nameFamily = $nameFamily;
+	}
+
+	public function getColor(){
+		return $this->color;
+	}
+
+	public function setColor($color){
+		$this->color = $color;
 	}
 
 	public function getToken(){

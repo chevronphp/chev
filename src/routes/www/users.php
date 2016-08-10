@@ -12,7 +12,7 @@ class users extends AbstractDispatchableController {
 	protected $hasher;
 	protected $router;
 
-	public function index(Dispatcher $views, $post, $forms, $hash, $router, $userMapper, $flash){
+	public function index(Dispatcher $views, $post, $forms, $hash, $router, $userMapper, $flash, $elements){
 		$link = null;
 		if($post && $post->get("username")){
 			$username = $hash->quick($post->get("username"));
@@ -31,8 +31,22 @@ class users extends AbstractDispatchableController {
 			"username"   => $forms->text("username"),
 			"nameGiven"  => $forms->text("name_given"),
 			"nameFamily" => $forms->text("name_family"),
+			"colors"     => $this->colorSpread($elements, $forms),
 			"message"    => $link,
 		]);
+	}
+
+	protected function colorSpread($elements, $forms){
+		return $elements->div(
+			[
+				$forms->radio("color", "red"),
+				$elements->span("red", ["class" => "red"]),
+				$forms->radio("color", "mustard"),
+				$elements->span("mustard", ["class" => "mustard"]),
+				$forms->radio("color", "teal"),
+				$elements->span("teal", ["class" => "teal"]),
+			], ["class" => "color_picker"]
+		);
 	}
 
 	protected function login($userMapper, $get, $currentUser, $router, $flash){
@@ -66,8 +80,8 @@ class users extends AbstractDispatchableController {
 			'FromEmail'  => "list@box370.net",
 			'FromName'   => "Equal Values",
 			'Subject'    => "Your Equal Values Login Link",
-			'Text-part'  => "Please use this link ({$link}) to log into equalvalues.net",
-			'Html-part'  => "Please use this <a href=\"{$link}\" target=\"_blank\">link</a> to log into equalvalues.net",
+			'Text-part'  => "Please use the link below to log into equalvalues.net.\n\nYou may need to copy-n-paste it into your browser's address bar.\n\n{$link}\n\n",
+			'Html-part'  => "Please use this <a href=\"{$link}\" target=\"_blank\">link</a> to log into equalvalues.net<br><br>",
 			'Recipients' => [
 				[
 					'Email' => $email
