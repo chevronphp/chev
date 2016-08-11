@@ -5,12 +5,15 @@ namespace Utilities;
 use Controllers\www\users;
 use Objects\User;
 
-class LayoutCommander {
+use Chevron\Containers\Registry;
+
+class LayoutCommander extends Registry {
 
 	protected $elements;
 	protected $router;
 
 	public function __construct($elements, $router, $flash, $views, $currentUser, $userMapper){
+		parent::__construct();
 		$this->elements = $elements;
 		$this->router   = $router;
 		$this->views    = $views;
@@ -24,9 +27,13 @@ class LayoutCommander {
 	}
 
 	public function setup($layout, $view){
+		foreach($this->range() as $key => $value){
+			$layout->set($key, $value);
+		}
+
 		$layout->setMany([
-			"flash"  => $this->flashStack(),
-			"logout" => $this->elements->a("logout", ["href" => $this->router->generate(users::class, "logout")]),
+			"flash"   => $this->flashStack(),
+			"logout"  => $this->elements->a("logout", ["href" => $this->router->generate(users::class, "logout")]),
 			"welcome" => $this->user ? $this->elements->span($this->user->getNameGiven()) : "",
 		]);
 

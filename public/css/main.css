@@ -1,4 +1,4 @@
-/* line 23, ../../src/scss/main.scss */
+/* line 28, ../../src/scss/main.scss */
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -7,38 +7,38 @@ body {
   padding: 0;
 }
 
-/* line 31, ../../src/scss/main.scss */
+/* line 36, ../../src/scss/main.scss */
 header, footer {
   display: block;
   clear: both;
 }
 
-/* line 36, ../../src/scss/main.scss */
+/* line 41, ../../src/scss/main.scss */
 p {
   font-size: .75em;
   line-height: 1.5em;
   font-family: "Roboto", sans-serif;
 }
 
-/* line 42, ../../src/scss/main.scss */
+/* line 47, ../../src/scss/main.scss */
 a:visited {
   color: #aaa;
 }
 
-/* line 46, ../../src/scss/main.scss */
+/* line 51, ../../src/scss/main.scss */
 .page {
   width: 80%;
   min-width: 400px;
   margin: 0 auto;
 }
 
-/* line 52, ../../src/scss/main.scss */
+/* line 57, ../../src/scss/main.scss */
 .title, .project-title, .project-title-subscript, .article .id, .article .title, footer .footerblock h2 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
-/* line 57, ../../src/scss/main.scss */
+/* line 62, ../../src/scss/main.scss */
 .project-title {
   font-size: 2.6em;
   letter-spacing: .3em;
@@ -51,8 +51,13 @@ a:visited {
   font-weight: 700;
   text-align: center;
 }
+/* line 74, ../../src/scss/main.scss */
+.project-title a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* line 71, ../../src/scss/main.scss */
+/* line 80, ../../src/scss/main.scss */
 .project-title-subscript {
   font-size: .2em;
   letter-spacing: .5em;
@@ -60,7 +65,7 @@ a:visited {
   text-align: center;
 }
 
-/* line 79, ../../src/scss/main.scss */
+/* line 88, ../../src/scss/main.scss */
 .collection-title {
   font-size: .3em;
   letter-spacing: .1em;
@@ -71,7 +76,7 @@ a:visited {
   border-bottom-width: .1em;
 }
 
-/* line 90, ../../src/scss/main.scss */
+/* line 99, ../../src/scss/main.scss */
 .link, .searchbar a, .searchbar span, .source_link p a {
   text-decoration: none;
   display: block;
@@ -82,7 +87,7 @@ a:visited {
   font-size: .7em;
 }
 
-/* line 100, ../../src/scss/main.scss */
+/* line 109, ../../src/scss/main.scss */
 .searchbar {
   display: flex;
   flex-flow: row wrap;
@@ -92,122 +97,131 @@ a:visited {
   margin-top: 2em;
   list-style-type: none;
 }
-/* line 108, ../../src/scss/main.scss */
+/* line 117, ../../src/scss/main.scss */
 .searchbar a, .searchbar span {
   padding: 1em;
 }
 
-/* line 114, ../../src/scss/main.scss */
+/* line 123, ../../src/scss/main.scss */
 .scaled-img {
   max-width: 100%;
   margin: .8em 0 0 0;
 }
 
-/* line 119, ../../src/scss/main.scss */
+/* line 128, ../../src/scss/main.scss */
+.hide {
+  visibility: hidden !important;
+  opacity: 0.0 !important;
+  height: 0px !important;
+  line-height: 0px !important;
+  overflow: hidden !important;
+}
+
+/* line 136, ../../src/scss/main.scss */
 .columns {
   display: flex;
   flex-flow: row wrap;
 }
 
-/* line 124, ../../src/scss/main.scss */
+/* line 141, ../../src/scss/main.scss */
 .column {
   display: flex;
   flex-flow: column nowrap;
   max-width: 24.99999999999%;
 }
 
-/* line 130, ../../src/scss/main.scss */
+/* line 147, ../../src/scss/main.scss */
 .article {
   box-shadow: .05em .05em .3em #e0e0e0;
   background-color: #fff;
   margin: .3em .3em;
   padding: 0 .9em;
 }
-/* line 135, ../../src/scss/main.scss */
+/* line 152, ../../src/scss/main.scss */
 .article .id, .article .project-title, .article .project-title-subscript, .article .id, .article .title, .article footer .footerblock h2, footer .footerblock .article h2 {
   font-size: .7em;
 }
 
-/* line 147, ../../src/scss/main.scss */
+/* line 164, ../../src/scss/main.scss */
 .red {
   color: #e71d36;
   border-bottom-color: #e71d36;
 }
 
-/* line 152, ../../src/scss/main.scss */
+/* line 169, ../../src/scss/main.scss */
 .teal {
   color: #2ec4b6;
   border-bottom-color: #2ec4b6;
 }
 
-/* line 157, ../../src/scss/main.scss */
+/* line 174, ../../src/scss/main.scss */
 .mustard {
   color: #ff9f1c;
   border-bottom-color: #ff9f1c;
 }
 
-/* line 162, ../../src/scss/main.scss */
+/* line 179, ../../src/scss/main.scss */
 footer {
   margin-top: 2em;
   background-color: #000;
   padding: 2em;
   color: #f6f6f6;
 }
-/* line 167, ../../src/scss/main.scss */
+/* line 184, ../../src/scss/main.scss */
 footer .footerblock {
   width: 80%;
   margin: 0 auto;
 }
-/* line 170, ../../src/scss/main.scss */
+/* line 187, ../../src/scss/main.scss */
 footer .footerblock h2 {
   font-size: .7em;
 }
-/* line 174, ../../src/scss/main.scss */
+/* line 191, ../../src/scss/main.scss */
 footer .footerblock section {
   display: flex;
   flex-flow: row nowrap;
 }
-/* line 177, ../../src/scss/main.scss */
+/* line 194, ../../src/scss/main.scss */
 footer .footerblock section p {
   margin-left: 8px;
   margin-right: 8px;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 186, ../../src/scss/main.scss */
+  /* line 203, ../../src/scss/main.scss */
   .column {
     max-width: 49.99999999999%;
   }
 
-  /* line 189, ../../src/scss/main.scss */
+  /* line 206, ../../src/scss/main.scss */
   .page {
     width: 90%;
   }
 }
 @media screen and (max-width: 575px) {
-  /* line 195, ../../src/scss/main.scss */
+  /* line 212, ../../src/scss/main.scss */
   .column {
     max-width: 100%;
   }
 
-  /* line 198, ../../src/scss/main.scss */
+  /* line 215, ../../src/scss/main.scss */
   .page {
     width: 95%;
   }
 }
-/* line 204, ../../src/scss/main.scss */
+/* line 221, ../../src/scss/main.scss */
 .upload_content {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-/* line 209, ../../src/scss/main.scss */
+/* line 226, ../../src/scss/main.scss */
 .upload_content .input, .upload_content p, .upload_content div {
   max-width: 50%;
   width: 50%;
 }
-/* line 213, ../../src/scss/main.scss */
+/* line 230, ../../src/scss/main.scss */
 .upload_content .input {
   margin: 12px 0 0 0;
   display: flex;
@@ -216,32 +230,38 @@ footer .footerblock section p {
   align-items: flex-start;
   text-align: right;
 }
-/* line 220, ../../src/scss/main.scss */
+/* line 237, ../../src/scss/main.scss */
 .upload_content .input label {
   width: 25%;
   text-align: right;
   padding-right: 6px;
 }
-/* line 221, ../../src/scss/main.scss */
+/* line 238, ../../src/scss/main.scss */
+.upload_content .input p {
+  text-align: left;
+  width: 70%;
+  max-width: 70%;
+}
+/* line 239, ../../src/scss/main.scss */
 .upload_content .input input, .upload_content .input textarea {
   width: 70%;
   max-width: 70%;
 }
-/* line 223, ../../src/scss/main.scss */
+/* line 241, ../../src/scss/main.scss */
 .upload_content .color_picker {
   text-align: left;
 }
-/* line 225, ../../src/scss/main.scss */
+/* line 243, ../../src/scss/main.scss */
 .upload_content .color_picker input, .upload_content .color_picker textarea {
   width: 8%;
   max-width: 10%;
 }
-/* line 226, ../../src/scss/main.scss */
+/* line 244, ../../src/scss/main.scss */
 .upload_content .color_picker span {
   border-bottom-width: 0px;
 }
 
-/* line 230, ../../src/scss/main.scss */
+/* line 248, ../../src/scss/main.scss */
 #flash_stack {
   position: fixed;
   top: 0px;
@@ -249,12 +269,43 @@ footer .footerblock section p {
   height: 30px;
   line-height: 30px;
   text-align: center;
-  background-color: #DEAF64;
   -webkit-transition: opacity 2s ease-in 2s;
   transition: opacity 2s ease-in 2s;
 }
+/* line 265, ../../src/scss/main.scss */
+#flash_stack.emergency {
+  background-color: #DA1E00;
+}
+/* line 266, ../../src/scss/main.scss */
+#flash_stack.alert {
+  background-color: #036A87;
+}
+/* line 267, ../../src/scss/main.scss */
+#flash_stack.critical {
+  background-color: #DA1E00;
+}
+/* line 268, ../../src/scss/main.scss */
+#flash_stack.error {
+  background-color: #DA1E00;
+}
+/* line 269, ../../src/scss/main.scss */
+#flash_stack.warning {
+  background-color: #DA6E00;
+}
+/* line 270, ../../src/scss/main.scss */
+#flash_stack.notice {
+  background-color: #DA6E00;
+}
+/* line 271, ../../src/scss/main.scss */
+#flash_stack.info {
+  background-color: #036A87;
+}
+/* line 272, ../../src/scss/main.scss */
+#flash_stack.debug {
+  background-color: #DA6E00;
+}
 
-/* line 249, ../../src/scss/main.scss */
+/* line 275, ../../src/scss/main.scss */
 #flash_stack.hidden {
   opacity: 0.0;
 }

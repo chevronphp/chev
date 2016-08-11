@@ -10,10 +10,10 @@ use Objects\User;
 
 class index extends AbstractDispatchableController {
 
-	public function index(Dispatcher $views, $assetMapper){
+	public function index(Dispatcher $views, $assetMapper, $get){
 		$columns = [];
 		$nCol = 0;
-		foreach($assetMapper->getAll() as $asset){
+		foreach($assetMapper->getAll(null, $get->get("sort")) as $asset){
 			$columns[$nCol][] = $asset;
 			$nCol = $nCol >=3 ? 0 : $nCol += 1;
 		}

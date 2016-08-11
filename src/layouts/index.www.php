@@ -13,13 +13,13 @@
 	<?php call_user_func($this->flash); ?>
 	<div class="page">
 		<header>
-			<h1 class="project-title">Artifacts of Equal Value</h1>
+			<h1 class="project-title"><a href="/">Artifacts of Equal Value</a></h1>
 			<h2 class="project-title-subscript">An Archive of Some Objects of Equal Value</h2>
 		</header>
-		<div class="search">
+		<div class="search <?= $this->shouldHide ? "hide" : ""; ?>">
 			<ul class="searchbar">
-				<li><a href="#">Arrange by Object</a></li>
-				<li><a href="#">Arrange by Owner</a></li>
+				<li><a href="/?sort=object">Arrange by Object</a></li>
+				<li><a href="/?sort=owner">Arrange by Owner</a></li>
 				<li><a href="#">Search Collection</a></li>
 				<li><span><input type="text"></span></li>
 			</ul>
@@ -30,7 +30,7 @@
 		<div class="footerblock">
 			<h2>About the project</h2>
 			<section>
-				<p><?= $this->welcome ? sprintf("Welcome %s. ", $this->welcome): "" ?>Would you like to <?= $this->logout ?>? <br><br>  Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
+				<p><?= $this->welcome ? sprintf("Welcome %s. ", $this->welcome): "" ?><br>Would you like to <?= $this->logout ?>?<br><br>Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
 				<p>Donec libero odio, molestie non est a, hendrerit lobortis nisl. Proin volutpat vestibulum tellus, non viverra est venenatis eu. Mauris efficitur condimentum convallis. Nunc ac urna euismod, laoreet enim quis, sodales turpis. Maecenas eget turpis rutrum, ultrices nunc ut, efficitur urna. Duis pretium quis nunc eu pretium. Aliquam erat volutpat. </p>
 			</section>
 		</div>

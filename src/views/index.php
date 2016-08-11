@@ -10,9 +10,11 @@
 						</div>
 						<h2 class="id">Object #: <?= $asset->getObjectNumber() ?></h2>
 						<h2 class="title"><?= $asset->getTitle() ?></h2>
-						<div class="description"><?= nl2br($asset->getDescription()) ?></div>
+						<div class="description">
+							<p><?= nl2br($asset->getDescription()) ?></p>
+						</div>
 						<div class="source_link">
-							<p><!-- <a href="https://catalog.archives.gov/id/192414?q=*:*">Source Link</a> --></p>
+							<p><a href="/add/?on=<?= $asset->getId() ?>">Source Link</a></p>
 						</div>
 					</section>
 				</article>

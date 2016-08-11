@@ -52,8 +52,16 @@ class AssetMapper {
 		return $return;
 	}
 
-	public function getAll($limit = null){
+	public function getAll($limit = null, $sortBy = "asset_id"){
 		$limit = (int)$limit;
+
+		$sortBy = $sortBy ?: "asset_id";
+		$sort = [
+			"asset_id" => "a.asset_id",
+			"object"   => "a.object_number",
+			"owner"    => "u.user_id",
+		];
+
 		$sql = "
 			select
 			  a.asset_id,
@@ -66,7 +74,7 @@ class AssetMapper {
 			  u.name_family collection
 			from assets a
 			inner join users u on u.user_id = a.user_id
-			order by asset_id asc
+			order by {$sort[$sortBy]} asc
 		" . ($limit ? " limit {$limit}" : "");
 
 		$rows = $this->dbWrite->rows($sql);

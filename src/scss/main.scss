@@ -20,6 +20,11 @@ $colorWhite: #fff;
 $fontMontserrat: 'Montserrat', sans-serif;
 $fontRoboto: 'Roboto', sans-serif;
 
+$alertYellow: #DA6E00;
+$alertGreen: #00A131;
+$alertBlue: #036A87;
+$alertRed: #DA1E00;
+
 body{
 	font-family: $fontMontserrat;
 	font-weight: 400;
@@ -66,6 +71,10 @@ a:visited{
 	margin: 1.5em 0 .5em 0;
 	font-weight: 700;
 	text-align: center;
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 .project-title-subscript {
@@ -114,6 +123,14 @@ a:visited{
 .scaled-img {
 	max-width: 100%;
 	margin: .8em 0 0 0;
+}
+
+.hide {
+	visibility: hidden !important;
+	opacity: 0.0 !important;
+	height: 0px !important;
+	line-height: 0px !important;
+	overflow: hidden !important;
 }
 
 .columns {
@@ -218,6 +235,7 @@ footer {
 		align-items: flex-start;
 		text-align: right;
 		label { width: 25%; text-align: right; padding-right: 6px; }
+		p { text-align: left; width: 70%; max-width: 70%; }
 		input, textarea { width: 70%; max-width: 70%; }
 	}
 	.color_picker {
@@ -235,7 +253,7 @@ footer {
 	line-height: 30px;
 	// opacity: 1.0;
 	text-align: center;
-	background-color: #DEAF64;
+	// background-color: #DEAF64;
 	-webkit-transition:
 		// height 2s ease-in 2s,
 		// line-height 2s ease-in 2s,
@@ -244,6 +262,14 @@ footer {
 		// height 2s ease-in 2s,
 		// line-height 2s ease-in 2s,
 		opacity 2s ease-in 2s;
+	&.emergency{ background-color: $alertRed; }
+	&.alert{ background-color: $alertBlue; }
+	&.critical{ background-color: $alertRed; }
+	&.error{ background-color: $alertRed; }
+	&.warning{ background-color: $alertYellow; }
+	&.notice{ background-color: $alertYellow; }
+	&.info{ background-color: $alertBlue; }
+	&.debug{ background-color: $alertYellow; }
 }
 
 #flash_stack.hidden {
@@ -251,3 +277,4 @@ footer {
 	// line-height: 0px;
 	opacity: 0.0;
 }
+
