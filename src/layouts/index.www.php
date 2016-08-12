@@ -13,8 +13,8 @@
 	<?php call_user_func($this->flash); ?>
 	<div class="page">
 		<header>
-			<h1 class="project-title"><a href="/">Artifacts of Equal Value</a></h1>
-			<h2 class="project-title-subscript">An Archive of Some Objects of Equal Value</h2>
+			<h1 class="project-title"><a href="/">Artifacts of Significance</a></h1>
+			<h2 class="project-title-subscript">An Archive of Some Objects of Some Importance</h2>
 		</header>
 		<div class="search <?= $this->hideSearch ? "hide" : ""; ?>">
 			<ul class="searchbar">
