@@ -44,7 +44,7 @@ p {
 	font-family: $fontRoboto;
 }
 
-a:visited{
+a:visited, a:active, a{
 	color: #aaa;
 }
 
@@ -89,7 +89,6 @@ a:visited{
 	font-size: .3em;
 	letter-spacing: .1em;
 	text-transform: uppercase;
-
 	padding-bottom: 1.5em;
 	margin-bottom: .2em;
 	border-bottom-style: solid;
@@ -114,9 +113,27 @@ a:visited{
 	margin-bottom: 1em;
 	margin-top: 2em;
 	list-style-type: none;
-	a, span {
+
+	a {
 		@extend .link;
 		padding: 1em;
+	}
+	input {
+		margin-bottom: 2px;
+	}
+	button {
+		background:none;
+		border: 0px;
+		color: $colorBlack;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		font-size: .7em;
+		padding: 3px;
+		margin-bottom: -5px;
+		span {
+			font-size: 1em;
+		}
 	}
 }
 

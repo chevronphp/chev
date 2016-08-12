@@ -88,6 +88,39 @@ class AssetMapper {
 		return $return;
 	}
 
+	public function getAllFromSearch($limit = null, $searchTerms = ""){
+		$limit = (int)$limit;
+
+		$sql = "
+			select
+			  a.asset_id,
+			  a.object_number,
+			  a.fname,
+			  a.title,
+			  a.description,
+			  a.user_id,
+			  u.color color,
+			  u.name_family collection
+			from assets a
+			inner join users u on u.user_id = a.user_id
+			WHERE
+				MATCH(a.title) AGAINST (? IN BOOLEAN MODE)
+			OR
+				MATCH(a.description) AGAINST (? IN BOOLEAN MODE)
+			order by a.asset_id asc
+		" . ($limit ? " limit {$limit}" : "");
+
+		$rows = $this->dbWrite->rows($sql, [$searchTerms, $searchTerms]);
+
+		$return = [];
+		if($rows){
+			foreach($rows as $row){
+				$return[$row["asset_id"]] = call_user_func_array([$this->assetFactory, AssetFactory::MAKE], $row);
+			}
+		}
+		return $return;
+	}
+
 	// public function getFromCategoryIds(array $ids);
 
 	// public function getFromAuthorIds(array $ids);

@@ -6,6 +6,7 @@
 	<title>Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/main.css" rel="stylesheet" media="all">
+    <link href="/css/octicons.css" rel="stylesheet" media="all">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab' rel='stylesheet' type='text/css'>
  </head>
@@ -20,8 +21,13 @@
 			<ul class="searchbar">
 				<li><a href="/?sort=object">Arrange by Object</a></li>
 				<li><a href="/?sort=owner">Arrange by Owner</a></li>
-				<li><a href="#">Search Collection</a></li>
-				<li><span><input type="text"></span></li>
+				<!-- <li><a href="#">Search:</a></li> -->
+				<li>
+					<form action="/">
+						<span><input type="text" name="search" /></span>
+						<button type="submit"><span class="octicon octicon-search"></span></button>
+					</form>
+				</li>
 			</ul>
 		</div>
 		<?php call_user_func($this->view) ?>

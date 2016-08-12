@@ -13,9 +13,21 @@ class index extends AbstractDispatchableController {
 	public function index(Dispatcher $views, $assetMapper, $get){
 		$columns = [];
 		$nCol = 0;
-		foreach($assetMapper->getAll(null, $get->get("sort")) as $asset){
-			$columns[$nCol][] = $asset;
-			$nCol = $nCol >=3 ? 0 : $nCol += 1;
+
+		switch(true){
+			default:
+			case $get->get("sort") :
+				foreach($assetMapper->getAll(null, $get->get("sort")) as $asset){
+					$columns[$nCol][] = $asset;
+					$nCol = $nCol >=3 ? 0 : $nCol += 1;
+				}
+				break;
+			case $get->get("search") :
+				foreach($assetMapper->getAllFromSearch(null, $get->get("search")) as $asset){
+					$columns[$nCol][] = $asset;
+					$nCol = $nCol >=3 ? 0 : $nCol += 1;
+				}
+				break;
 		}
 
 		return $views->get("index.php", [
