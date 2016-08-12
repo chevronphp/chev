@@ -16,7 +16,7 @@
 			<h1 class="project-title"><a href="/">Artifacts of Equal Value</a></h1>
 			<h2 class="project-title-subscript">An Archive of Some Objects of Equal Value</h2>
 		</header>
-		<div class="search <?= $this->shouldHide ? "hide" : ""; ?>">
+		<div class="search <?= $this->hideSearch ? "hide" : ""; ?>">
 			<ul class="searchbar">
 				<li><a href="/?sort=object">Arrange by Object</a></li>
 				<li><a href="/?sort=owner">Arrange by Owner</a></li>

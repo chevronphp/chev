@@ -22,7 +22,7 @@ class add extends AbstractDispatchableController {
 		}
 
 		$source = $assetMapper->getFromId($get->get("on"));
-		$layoutCommander->set("shouldHide", true);
+		$layoutCommander->set("hideSearch", true);
 		return $views->get("add.php", [
 			"source"               => $assetMapper->getFromId($get->get("on")),
 			"sourceThumb"          => $elements->img(null, ["src" => "/images/{$source->getFname()}", "class" => "scaled-img"]),
