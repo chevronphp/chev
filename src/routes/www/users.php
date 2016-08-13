@@ -21,9 +21,9 @@ class users extends AbstractDispatchableController {
 				$user = $this->create($userMapper, $post, $hash);
 			}
 
-			$link = sprintf("%s%s", $config["tld"], $router->generate(users::class, "login", "html", ["c" => $user->getToken()]));
+			$link = sprintf("%s%s", $config("tld"), $router->generate(users::class, "login", "html", ["c" => $user->getToken()]));
 
-			if(!empty($config["email"])){
+			if(!empty($config("email"))){
 				$this->send($post->get("username"), $link);
 			}
 			$flash->notice("check your email");
