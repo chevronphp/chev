@@ -24,9 +24,10 @@ class error extends AbstractDispatchableController implements DispatchableInitia
 			"class"   => get_class($e),
 			"message" => $e->getMessage(),
 			"code"    => $e->getCode(),
-			"file"    => $e->getFile(),
+			"file"    => basename($e->getFile()),
 			"line"    => $e->getLine(),
-			"trace"   => $e->getTraceAsString(),
+			"trace"   => "",
+			// "trace"   => $e->getTraceAsString(),
 		]);
 	}
 
