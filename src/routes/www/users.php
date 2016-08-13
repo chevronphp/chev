@@ -68,7 +68,7 @@ class users extends AbstractDispatchableController {
 
 	protected function create($userMapper, $post, $hash){
 		$username = $hash->quick($post->get("username"));
-		$user = $userMapper->make(null, $username, $post->get("name_given"), $post->get("name_family"), null, null);
+		$user = $userMapper->make(null, $username, $post->get("name_given"), $post->get("name_family"), $post->get("color"), null);
 		return $user;
 	}
 

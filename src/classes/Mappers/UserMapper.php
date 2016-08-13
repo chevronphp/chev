@@ -96,8 +96,8 @@ class UserMapper {
 		}
 	}
 
-	public function make($user_id, $username, $name_given, $name_family, $color, $token, $token_expired){
-		$user = $this->userFactory->make($user_id, $username, $name_given, $name_family, $token, $token_expired);
+	public function make($user_id, $username, $name_given, $name_family, $color, $token){
+		$user = $this->userFactory->make($user_id, $username, $name_given, $name_family, $token);
 		$this->save($user);
 		return $user;
 	}

@@ -12,14 +12,13 @@ class User {
 	protected $token;
 	protected $tokenExpired;
 
-	public function __construct($userId, $username, $nameGiven, $nameFamily, $color, $token, $tokenExpired){
+	public function __construct($userId, $username, $nameGiven, $nameFamily, $color, $token){
 		$this->setId($userId);
 		$this->setUsername($username);
 		$this->setNameGiven($nameGiven);
 		$this->setNameFamily($nameFamily);
 		$this->setColor($color);
 		$this->setToken($token);
-		$this->setTokenExpired($tokenExpired);
 	}
 
 	public function getId(){
@@ -71,15 +70,6 @@ class User {
 	public function setToken($token){
 		$this->token = $token;
 	}
-
-	public function getTokenExpired(){
-		return $this->tokenExpired;
-	}
-
-	public function setTokenExpired($tokenExpired){
-		$this->tokenExpired = $tokenExpired;
-	}
-
 
 }
 
