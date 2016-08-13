@@ -28,6 +28,7 @@ return function($di){
 	});
 
 	$di->set("config", function(){
+
 		if(file_exists(dirname(DIR_BASE) . "/config.php")){
 			$config = require dirname(DIR_BASE) . "/config.php";
 		}
