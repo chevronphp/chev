@@ -12,7 +12,7 @@ class users extends AbstractDispatchableController {
 	protected $hasher;
 	protected $router;
 
-	public function index(Dispatcher $views, $post, $forms, $hash, $router, $userMapper, $flash, $elements){
+	public function index(Dispatcher $views, $post, $forms, $hash, $router, $userMapper, $flash, $elements, $config){
 		$link = null;
 		if($post && $post->get("username")){
 			$username = $hash->quick($post->get("username"));
@@ -21,8 +21,11 @@ class users extends AbstractDispatchableController {
 				$user = $this->create($userMapper, $post, $hash);
 			}
 
-			$link = sprintf("http://local.equalvalues.com%s", $router->generate(users::class, "login", "html", ["c" => $user->getToken()]));
-			$this->send($post->get("username"), $link);
+			$link = sprintf("%s%s", $config["tld"], $router->generate(users::class, "login", "html", ["c" => $user->getToken()]));
+
+			if(!empty($config["email"])){
+				$this->send($post->get("username"), $link);
+			}
 			$flash->notice("check your email");
 			return $this->redirect($router->generate(users::class));
 		}

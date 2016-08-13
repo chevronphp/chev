@@ -4,11 +4,7 @@ use Chevron\DB;
 
 return function($di){
 
-	$config = [];
-
-	if(file_exists(dirname(DIR_BASE) . "/config.php")){
-		$config = require dirname(DIR_BASE) . "/config.php";
-	}
+	$config = $di->get("config");
 
 	$di->set("dbWrite", function() use($config){
 

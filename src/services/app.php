@@ -26,6 +26,13 @@ return function($di){
 	$di->set("mailjet", function(){
 		return new Mailjet\Client("0774783be3bcae9a59daa142345e4bc1", "68e1b9245b3e51926c3f048ae242e9ff");
 	});
+
+	$di->set("config", function(){
+		if(file_exists(dirname(DIR_BASE) . "/config.php")){
+			$config = require dirname(DIR_BASE) . "/config.php";
+		}
+		return $config ?: [];
+	});
 };
 
 
