@@ -40,7 +40,6 @@ try{
 	$controller = $dispatcher->dispatch($route);
 	$view       = call_user_func($controller);
 }catch(\Exception $e){
-	drop($e);
 	$controller = $dispatcher->dispatch(new Route(error::class));
 	$code       = $e->getCode() ?: 500;
 	$view       = call_user_func($controller, ($action = null), [$e->getCode(), $e]);
