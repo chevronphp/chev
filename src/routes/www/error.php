@@ -19,7 +19,7 @@ class error extends AbstractDispatchableController implements DispatchableInitia
 		list($code, $e) = func_get_args();
 
 		$fulfillment->setStatusCode($code);
-// drop($e, basename($e->getFile()), $e->getFile());
+
 		return $this->widgets->get("error.php", [
 			"eClass"   => get_class($e),
 			"eMessage" => $e->getMessage(),
