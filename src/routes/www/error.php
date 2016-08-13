@@ -19,15 +19,15 @@ class error extends AbstractDispatchableController implements DispatchableInitia
 		list($code, $e) = func_get_args();
 
 		$fulfillment->setStatusCode($code);
-
+// drop($e, basename($e->getFile()), $e->getFile());
 		return $this->widgets->get("error.php", [
-			"class"   => get_class($e),
-			"message" => $e->getMessage(),
-			"code"    => $e->getCode(),
-			"file"    => basename($e->getFile()),
-			"line"    => $e->getLine(),
-			"trace"   => "",
-			// "trace"   => $e->getTraceAsString(),
+			"eClass"   => get_class($e),
+			"eMessage" => $e->getMessage(),
+			"eCode"    => $e->getCode(),
+			"eFile"    => basename($e->getFile()),
+			"eLine"    => $e->getLine(),
+			"eTrace"   => "",
+			// "eTrace"   => $e->getTraceAsString(),
 		]);
 	}
 

@@ -1,11 +1,11 @@
 
-<p><?= $this->class ?></p>
+<p><?= $this->eClass ?></p>
 
-<p><?= sprintf("%s:%d", $this->file, $this->line) ?></p>
+<p><?= sprintf("%s:%d", $this->eFile, $this->eLine) ?></p>
 <fieldset>
 	<legend>backtrace</legend>
 
-	<p><?= $this->message ? sprintf("code: (%d); message: %s", $this->code, $this->message) : "" ?></p>
-	<pre><?= $this->trace ?></pre>
+	<p><?= $this->eMessage ? sprintf("code: (%d); message: %s", $this->eCode, $this->eMessage) : "" ?></p>
+	<pre><?= $this->eTrace ?></pre>
 
 </fieldset>
