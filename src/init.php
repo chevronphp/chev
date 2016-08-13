@@ -19,7 +19,7 @@ spl_autoload_register(new Psr0(DIR_BASE . "/classes"));
 spl_autoload_register(new Psr4("Controllers", DIR_BASE . "/routes"));
 
 set_error_handler(new ErrorHandler);
-set_exception_handler(new ExceptionHandler(ExceptionHandler::ENV_DEV));
+set_exception_handler(new ExceptionHandler(ExceptionHandler::ENV_PROD));
 
 $di = (new ObjectLoader)->loadObject(new Di, DIR_BASE . "/services");
 
