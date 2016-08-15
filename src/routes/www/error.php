@@ -21,12 +21,13 @@ class error extends AbstractDispatchableController implements DispatchableInitia
 		$fulfillment->setStatusCode($code);
 
 		return $this->widgets->get("error.php", [
-			"class"   => get_class($e),
-			"message" => $e->getMessage(),
-			"code"    => $e->getCode(),
-			"file"    => $e->getFile(),
-			"line"    => $e->getLine(),
-			"trace"   => $e->getTraceAsString(),
+			"eClass"   => get_class($e),
+			"eMessage" => $e->getMessage(),
+			"eCode"    => $e->getCode(),
+			"eFile"    => basename($e->getFile()),
+			"eLine"    => $e->getLine(),
+			"eTrace"   => "",
+			// "eTrace"   => $e->getTraceAsString(),
 		]);
 	}
 

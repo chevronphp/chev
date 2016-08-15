@@ -2,3 +2,4 @@ vendor/*
 config.php
 .sass-cache/
 uploads/*
+*.zip
