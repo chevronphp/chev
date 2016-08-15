@@ -13,6 +13,13 @@ return function($di){
 
 	$di->set("select", Chevron\HTML\SelectDispatcher::class);
 
+	$di->set("config", function(){
+
+		if(file_exists(dirname(DIR_BASE) . "/config.php")){
+			$config = require dirname(DIR_BASE) . "/config.php";
+		}
+		return $config ?: [];
+	});
 };
 
 
