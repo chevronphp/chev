@@ -1,1 +1,1 @@
-<?php call_user_func($this->view) ?>
+<?php call_user_func($this->getView()) ?>

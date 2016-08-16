@@ -10,6 +10,6 @@
 </head>
 <body>
 	<?php call_user_func($this->flash); ?>
-	<?php call_user_func($this->view) ?>
+	<?php call_user_func($this->getView()) ?>
 </body>
 </html>
