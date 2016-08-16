@@ -17,7 +17,6 @@
 	"require": {
 		"php"                            : ">=5.5.0",
 		"chevron/chevron"                : "~7.0",
-		"chevron/html"                   : "~0.0",
 
 		"henderjon/drop"                 : "~1.0",
 		"henderjon/redis"                : "~2.0",
